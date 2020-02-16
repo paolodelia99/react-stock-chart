@@ -20,7 +20,7 @@ const FinancialChart = ({financialItem:{financialItem},getFinancialItem}) => {
     useLayoutEffect(() => {
         if (firstUpdate.current) {
             firstUpdate.current = false;
-            getFinancialItem();
+            getFinancialItem('TSLA');
             return;
         }
 

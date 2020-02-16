@@ -12,7 +12,13 @@ code {
     monospace;
 }
 
+.App{
+  padding: 10px;
+  text-align: center;
+}
+
 .financial-item-big-wrapper{
+  margin: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
