@@ -1,11 +1,17 @@
 import React from 'react';
-import './App.css';
+import FinancialChart from "./components/FinancialChart";
 
-function App() {
+import {Provider} from 'react-redux'
+import store from "./store";
+
+const App = () => {
+
   return (
-    <div className="App">
-
-    </div>
+      <Provider store={store}>
+          <div className="App">
+              <FinancialChart/>
+          </div>
+      </Provider>
   );
 }
 

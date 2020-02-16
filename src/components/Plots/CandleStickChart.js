@@ -3,19 +3,20 @@ import PropTypes from 'prop-types'
 import Plot from 'react-plotly.js';
 
 const CandleStickChart = ({financialItem,financialItemName}) => {
+    console.log(financialItem)
     return (
         <Fragment>
             <Plot
                 data={[
                     {
-                        x: financialItem.chartXValues,
-                        close: financialItem.chartCloseValues,
+                        x: financialItem.financialChartXValues,
+                        close: financialItem.financialChartCloseValues,
                         decreasing: {line: {color: 'red'}},
-                        high: financialItem.chartHighValues,
+                        high: financialItem.financialChartHighValues,
                         increasing: {line: {color: 'green'}},
                         line: {color: 'rgba(31,119,180,1)'},
-                        low: financialItem.chartLowValues,
-                        open: financialItem.chartOpenValues,
+                        low: financialItem.financialChartLowValues,
+                        open: financialItem.financialChartOpenValues,
                         type: 'candlestick',
                     }
                 ]}

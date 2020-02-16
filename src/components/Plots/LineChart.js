@@ -3,13 +3,15 @@ import PropTypes from 'prop-types'
 import Plot from 'react-plotly.js';
 
 const LineChart = ({financialItem,financialItemName,color}) => {
+    console.log(financialItem)
+
     return (
         <Fragment>
             <Plot
                 data={[
                     {
-                        x: financialItem.chartXValues,
-                        y: financialItem.chartCloseValues,
+                        x: financialItem.financialChartXValues,
+                        y: financialItem.financialChartCloseValues,
                         type: 'scatter',
                         mode: 'lines+markers',
                         marker: {color: color},
