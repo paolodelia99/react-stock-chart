@@ -1,7 +1,8 @@
 import React, {useLayoutEffect, useRef, useState} from 'react';
-// Material UI imports
+// Components imports
 import LineChart from "./Plots/LineChart";
 import CandleStickChart from "./Plots/CandleStickChart";
+// Material UI imports
 import FormControl from "@material-ui/core/FormControl";
 import InputLabel from "@material-ui/core/InputLabel";
 import Select from "@material-ui/core/Select";
@@ -12,7 +13,7 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types'
 import {getFinancialItem} from "../actions/financialItem";
 
-const FinancialChart = ({financialItem:{financialItem},getFinancialItem}) => {
+const FinancialItem = ({financialItem:{financialItem},getFinancialItem}) => {
     const classes = financialItemStyle();
     const [typeOfChart,setTypeOfChart] = useState('line');
     const firstUpdate = useRef(true);
@@ -83,7 +84,7 @@ const FinancialChart = ({financialItem:{financialItem},getFinancialItem}) => {
     );
 };
 
-FinancialChart.propTypes = {
+FinancialItem.propTypes = {
     financialItem: PropTypes.object.isRequired,
     getFinancialItem: PropTypes.func.isRequired
 }
@@ -92,4 +93,4 @@ const mapStateToProps = state => ({
     financialItem: state.financialItem
 })
 
-export default connect(mapStateToProps,{getFinancialItem})(FinancialChart);
+export default connect(mapStateToProps,{getFinancialItem})(FinancialItem);

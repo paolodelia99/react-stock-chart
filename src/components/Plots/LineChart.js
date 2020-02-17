@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import Plot from 'react-plotly.js';
 
 const LineChart = ({financialItem,financialItemName,color}) => {
-    console.log(financialItem)
-
     return (
         <Fragment>
             <Plot
